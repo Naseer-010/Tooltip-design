@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "PhishShield",
+  "version": "1.0",
+  "description": "Analyze URLs for phishing and malicious content.",
+  "permissions": ["activeTab", "contextMenus", "scripting"],
+  "host_permissions": ["http://localhost:8000/*"],  
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/just_logo.png",
+      "48": "icons/bg_removed_logo.png",
+      "128": "icons/logo_actual.jpg"
+    }
+  },
+  "icons": {
+    "16": "icons/just_logo.png",
+    "48": "icons/bg_removed_logo.png",
+    "128": "icons/logo_actual.jpg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}

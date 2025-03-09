@@ -1,0 +1,16 @@
+#phishshield-tooltip {
+    padding: 8px 12px;
+    background-color: #404540;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    transition: background-color 0.3s ease;
+  }
+  
+  #phishshield-tooltip:hover {
+    background-color: #45a049;
+  }
